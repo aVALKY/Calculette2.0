@@ -16,8 +16,9 @@ const calc = () => {
         setTotal(eval(total));
     }
 }
-
-
+const boutonReset = () => {
+    setTotal("");
+}
 
     return <>
 
@@ -31,7 +32,7 @@ const calc = () => {
 
                 <button type="button" className="operator btn btn-info " onClick={caracterToAdd} value="+">+</button>
                 <button type="button" className="operator btn btn-info " onClick={caracterToAdd} value="-">-</button>
-                <button type="button" className="operator btn btn-info " onClick={caracterToAdd} value="*">*</button>
+                <button type="button" className="operator btn btn-info " onClick={caracterToAdd} value="x">*</button>
                 <button type="button" className="operator btn btn-info " onClick={caracterToAdd} value="/">/</button>
 
                 <button type="button" value="7" className="btn waves-effect chiffre " onClick={caracterToAdd}>7</button>
@@ -51,7 +52,7 @@ const calc = () => {
 
                 <button type="button" value="0" className="btn waves-effect " onClick={caracterToAdd}>0</button>
                 <button type="button" className="decimal function btn btn-secondary" onClick={caracterToAdd}  value=".">.</button>
-                <button type="button" className="all-clear function btn btn-danger btn-sm" value="all-clear" >AC</button>
+                <button type="button" className="all-clear function btn btn-danger btn-sm" value="all-clear" onClick={boutonReset} >AC</button>
 
                 <button  type="button" className="equal-sign operator btn btn-default" value="=" onClick={calc} >=</button>
             </div>
