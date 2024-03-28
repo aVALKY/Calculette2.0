@@ -31,8 +31,8 @@ const calc = () => {
 
                 <button type="button" className="operator btn btn-info " onClick={caracterToAdd} value="+">+</button>
                 <button type="button" className="operator btn btn-info " onClick={caracterToAdd} value="-">-</button>
-                <button type="button" className="operator btn btn-info " onClick={caracterToAdd} value="*">&times;</button>
-                <button type="button" className="operator btn btn-info " onClick={caracterToAdd} value="/">&divide;</button>
+                <button type="button" className="operator btn btn-info " onClick={caracterToAdd} value="*">*</button>
+                <button type="button" className="operator btn btn-info " onClick={caracterToAdd} value="/">/</button>
 
                 <button type="button" value="7" className="btn waves-effect chiffre " onClick={caracterToAdd}>7</button>
                 <button type="button" value="8" className="btn waves-effect chiffre " onClick={caracterToAdd}>8</button>
