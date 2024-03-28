@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './style.css';
 
+let reg = new RegExp("^[\\d\\W]+$");
 
 const Calculette = () => {
 const [total, setTotal] = useState("");
@@ -22,6 +23,29 @@ const boutonReset = () => {
 const deleteTotal = () => {
     setTotal(total.slice(0, -1));
 }
+
+
+useEffect( () => {
+    document.addEventListener("keyup", (e) => {
+        switch (e.key){
+            case "Enter" :
+                calc(total);
+                break;
+            case "Backspace" :
+                boutonReset();
+                break;
+            case "Delete":
+                deleteTotal();
+                break;
+            default :
+                if (reg.test(e.key)){
+                    setTotal(total + e.key)
+                }
+                break;
+        }
+    });
+}, [])
+
 
     return <>
 
